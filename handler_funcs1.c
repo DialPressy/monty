@@ -12,7 +12,7 @@ void pint_handler(stack_t **stack, unsigned int line_number)
 
 	if (!head)
 	{
-		dprintf(STDERR_FILENO, PINT_FAIL, line_number);
+		dprintf(STDERR_FILENO, "L%u: can't pint, stack empty\n", line_number);
 		free_all(1);
 		exit(EXIT_FAILURE);
 	}
